@@ -1,0 +1,82 @@
+body {
+    background-color: #000;
+  }
+  
+  #landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+  }
+  
+  #landing-header h1 {
+    color: #fff;
+  }
+  
+  .slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite; 
+  }
+  
+  .slideshow li:nth-child(1) { 
+    background-image: url(https://s1.1zoom.me/b5163/619/Towel_Bambusoideae_Stones_Spa_Salt_562601_1920x1080.jpg) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://s1.1zoom.me/b4756/353/Candles_Salt_Spa_515604_1920x1080.jpg);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://www.aroell.com/wp-content/uploads/2017/12/wallpapers-3d-hotel-design-hd-wallpaper-artistic-hd-wallpapers.jpg);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://c1.wallpaperflare.com/preview/65/265/305/tattoo-shaving-shave-barber.jpg);
+    animation-delay: 30s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://c0.wallpaperflare.com/preview/987/555/718/adults-barber-barbershop-city.jpg);
+    animation-delay: 40s; 
+  }
+  
+  @keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
+  
+  /* Older browser support - .no-cssanimations class added by modernizr */
+  .no-cssanimations .slideshow li {
+      opacity: 1;
+  }
